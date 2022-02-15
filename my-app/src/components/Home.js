@@ -4,10 +4,14 @@ import CardList from "./CardList";
 
 function Home() {
   return (
-
-    
     <div>
-      <Container>
+      <Container fluid>
+        <div className="container-fluid bg-light text-dark shadow-sm">
+          <div className="container bg-light p-5">
+            <h1 className="display-4 fw-bold">Recent Posts</h1>
+            {/* <hr /> */}
+          </div>
+        </div>
         <CardList />
         <Col>
           <div className="pt-5 mt-5 mb-5 pb-5 w-50 mx-auto align-center">
@@ -64,16 +68,6 @@ function Home() {
             </Form>
           </div>
         </Col>
-        <div className="container-fluid bg-light text-dark p-5">
-          <div className="container bg-light p-5">
-            <h1 className="display-4 fw-bold">Welcome to Admin Dashboard</h1>
-            <hr />
-            <p>Go to My Website</p>
-            <a href="#" className="btn btn-primary">
-              link
-            </a>
-          </div>
-        </div>
       </Container>
     </div>
   );
