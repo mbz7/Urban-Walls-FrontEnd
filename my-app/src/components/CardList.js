@@ -1,24 +1,29 @@
-import React from "react";
-import Card from "./Card"
+import React, { useEffect, useState } from "react";
+import Cards from "./Cards";
 
 function CardList() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    console.log("hi")
+    fetch("http://localhost:9292/post")
+      .then((r) => r.json())
+      .then((data) => setPosts(data));
+  }, []);
+
   return (
-    // <div>
-    //   const cardList = cards.map((card => (
-    //   <Card
-    //     key={resort.id}
-    //     // resort={resort}
-    //     city={resort.city}
-    //     name={resort.name}
-    //     website={resort.website}
-    //     image={resort.resortImage}
-    //     groomed={resort.machineGroomed}
-    //     runs={resort.runsOpen}
-    //     lifts={resort.liftsOpen}
-    //     resortCity={resort.resortCity}
-    //   />
-    //   ));
-    // </div>
+    <div>
+      {posts.map((post) => (
+        <Cards
+          key={post.id}
+          photo={post.photo_url}
+          artist={post.artist}
+          location={post.loacation}
+          date={post.post_date}
+        />
+      ))}
+      ;
+    </div>
   );
 }
 

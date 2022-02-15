@@ -10,7 +10,10 @@ import {
   Accordion,
 } from "react-bootstrap";
 
-function Card() {
+function Cards({artist, photo, location, date,}) {
+
+
+
   return (
     <div>
       <Container className={"d-flex align-items-center justify-content-center"}>
@@ -21,22 +24,22 @@ function Card() {
           <Card.Img
             className={"ratio ratio-1x1"}
             variant="top"
-            src={image}
-            alt={name}
+            src={photo}
+            alt={artist}
           />
 
           <Card.Title>
-            <h3 className="text-uppercase mt-2">{name}</h3>
-            <b>{city}, CO</b>
-            <br></br>
-            <a href={website}>Link to Website</a>
+            <h3 className="text-uppercase mt-2">{artist}</h3>
+            <b>{location}, CO</b>
+            {/* <br></br>
+            <a href={website}>Link to Website</a> */}
           </Card.Title>
           <hr></hr>
-          <Card.Body>
+          {/* <Card.Body>
             <Row>
               <div class="justify-content-evenly">
                 <div class="d-inline-block">
-                  <b>Machine Groomed: </b>
+                  <b>{artist}</b>
                   {groomed}"
                   <img src={`../resort-icons/machine-groomed.png`}></img>
                 </div>
@@ -53,7 +56,7 @@ function Card() {
                 </div>
               </div>
             </Row>
-          </Card.Body>
+          </Card.Body> */}
           <Button></Button>
         </Card>
       </Container>
@@ -61,4 +64,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default Cards;

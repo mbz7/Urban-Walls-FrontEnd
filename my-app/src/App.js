@@ -12,7 +12,9 @@ function App() {
         <>
           <Navbar bg="dark" variant="dark">
             <Container>
-              <Navbar.Brand as={Link} to="/">Urban Walls</Navbar.Brand>
+              <Navbar.Brand as={Link} to="/">
+                Urban Walls
+              </Navbar.Brand>
               <div className="justify-content-end">
                 <Nav className="me-auto">
                   <Nav.Link as={Link} to="/">
