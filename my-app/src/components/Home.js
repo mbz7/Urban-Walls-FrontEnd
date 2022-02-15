@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, Form, Button, Row, Col } from "react-bootstrap";
-import CardList from "./CardList";
+import { Container} from "react-bootstrap";
+import CardList from "./CardList"
+import NewPost from "./NewPost"
 
 function Home() {
   return (
