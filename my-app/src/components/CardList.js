@@ -22,9 +22,8 @@ function CardList() {
           date={post.post_date}
         />
       ))}
-      ;
     </div>
-  );
+  )
 }
 
 export default CardList;

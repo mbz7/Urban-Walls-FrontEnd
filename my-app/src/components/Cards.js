@@ -30,7 +30,7 @@ function Cards({artist, photo, location, date,}) {
 
           <Card.Title>
             <h3 className="text-uppercase mt-2">{artist}</h3>
-            <b>{location}, CO</b>
+            <b>{location}</b>
             {/* <br></br>
             <a href={website}>Link to Website</a> */}
           </Card.Title>

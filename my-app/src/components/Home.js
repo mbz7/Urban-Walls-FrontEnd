@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
-import CardList from "./CardList"
+import CardList from "./CardList";
 
 function Home() {
   return (
@@ -64,12 +64,12 @@ function Home() {
             </Form>
           </div>
         </Col>
-        <div class="container-fluid bg-light text-dark p-5">
-          <div class="container bg-light p-5">
-            <h1 class="display-4 fw-bold">Welcome to Admin Dashboard</h1>
+        <div className="container-fluid bg-light text-dark p-5">
+          <div className="container bg-light p-5">
+            <h1 className="display-4 fw-bold">Welcome to Admin Dashboard</h1>
             <hr />
             <p>Go to My Website</p>
-            <a href="#" class="btn btn-primary">
+            <a href="#" className="btn btn-primary">
               link
             </a>
           </div>
