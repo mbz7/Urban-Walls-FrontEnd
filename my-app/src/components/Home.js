@@ -1,10 +1,14 @@
 import React from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
+import CardList from "./CardList"
 
 function Home() {
   return (
+
+    
     <div>
       <Container>
+        <CardList />
         <Col>
           <div className="pt-5 mt-5 mb-5 pb-5 w-50 mx-auto align-center">
             <Form>
