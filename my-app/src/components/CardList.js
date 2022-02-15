@@ -12,22 +12,17 @@ function CardList() {
       .then((data) => setPosts(data));
   }, []);
 
-  return (
-    <div>
-          <Col className="mx-auto col-lg-6">
-            {posts.map((post) => (
-              <Cards
-                key={post.id}
-                photo={post.photo_url}
-                artist={post.artist}
-                location={post.loacation}
-                date={post.post_date}
-                likes
-              />
-            ))}
-          </Col>
-    </div>
-  );
-}
+  const renderPosts = (l) =>
+  <Cards key={l.id} post={l}  setPosts={setPosts} posts={posts} />
+  
+    return (
+      <div>
+            <Col className="mx-auto col-lg-6">
+            {posts.map((posts) => renderPosts(posts))}
+            </Col>
+      </div>
+    );
+  }
+  
 
 export default CardList;

@@ -10,7 +10,29 @@ import {
   Accordion,
 } from "react-bootstrap";
 
-function Cards({ artist, photo, location, date, likes }) {
+function Cards({ artist, photo, location, date, likes, posts, setPosts, post }) {
+
+  function handleDeleteClick() {
+    console.log("test")
+    fetch(`http://localhost:9292/post/${post.id}`, {
+      method: "DELETE"
+    })
+    .then(() => handleDeletePost(post.id))
+    
+  }
+
+  function handleDeletePost(id) {
+    const updatedPosts = posts.filter((post) => {
+      return post.id !== id
+    })
+    setPosts(updatedPosts)
+
+    
+  
+  }
+
+
+
   return (
     <div>
       <Container className={"d-flex align-items-center justify-content-center"}>
@@ -21,13 +43,13 @@ function Cards({ artist, photo, location, date, likes }) {
           <Card.Img
             className={"ratio ratio-1x1"}
             variant="top"
-            src={photo}
-            alt={artist}
+            src={post.photo_url}
+            alt={post.artist}
           />
 
           <Card.Title>
-            <h3 className="text-uppercase mt-2">{artist}</h3>
-            <b>{location}</b>
+            <h3 className="text-uppercase mt-2">{post.artist}</h3>
+            <b>{post.location}</b>
             {/* <br></br>
             <a href={website}>Link to Website</a> */}
           </Card.Title>
@@ -71,12 +93,12 @@ function Cards({ artist, photo, location, date, likes }) {
               </button>
             </Col>
             <Col className="col-2">
-              {likes} likes
+              {post.likes} likes
             </Col>
           </Row>
           <Row>
             <Col>
-              <Button className="btn-danger">DELETE</Button>
+              <Button  onClick={handleDeleteClick} className="btn-danger">DELETE</Button>
             </Col>
           </Row>
         </Card>
