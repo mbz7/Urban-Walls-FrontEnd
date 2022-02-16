@@ -60,3 +60,8 @@
   color: rgb(96, 96, 96) !important;
   font-size: 1.1em;
 }
+
+.lightbox-image {
+  margin: 0 auto;
+  height: 300px;
+}

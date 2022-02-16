@@ -87,13 +87,14 @@ function Cards({
             variant="top"
             src={post.photo_url}
             alt={post.artist}
+            onClick={handleClick}
           />
 
           <Card.Body>
             {/* Modal button */}
-            <Button onClick={handleClick} variant="light">
-              🔍
-            </Button>
+            <button className="btn-sm mb-3 btn btn-outline-secondary"onClick={handleClick}>
+              View Image
+            </button>
             <Card.Title>
               <h3 className="text-uppercase mt-2">{post.artist}</h3>
               <b>{post.location}</b>

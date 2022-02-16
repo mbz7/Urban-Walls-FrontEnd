@@ -10,8 +10,8 @@ export default function ImageModal({ modalShow, setModalShow, image }) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Body>
-          <Image src={image} />
+        <Modal.Body className="lightbox-image img-fluid">
+          <Image className="img-fluid"src={image} />
         </Modal.Body>
       </Modal>
     );
