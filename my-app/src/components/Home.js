@@ -1,15 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import CardList from "./CardList";
 import NewPost from "./NewPost";
 
-
 function Home() {
   const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState({});
-  const[loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  //  loggedIn ? console.log("ok") : console.log("log in");
+  //  loggedIn ? console.log("Access Granted") : console.log("Log In");
   useEffect(() => {
     console.log("hi");
     fetch("http://localhost:9292/post")
@@ -24,7 +23,7 @@ function Home() {
           <div className="container bg-light p-5">
             <h1 className="display-4 fw-bold">Recent Posts</h1>
             <hr />
-            <NewPost newPost={newPost} setNewPost={setNewPost} />
+            <NewPost setNewPost={setNewPost} />
           </div>
         </div>
         <CardList posts={posts} setPosts={setPosts} />

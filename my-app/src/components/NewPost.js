@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button, Row, Col, Modal } from "react-bootstrap";
 
-export default function NewPost({ newPost, setNewPost }) {
+export default function NewPost({ setNewPost }) {
   const [show, setShow] = useState(false);
   const [location, setLocation] = useState("");
   const [img, setImg] = useState("");
@@ -27,9 +27,6 @@ export default function NewPost({ newPost, setNewPost }) {
     handleClose();
   }
 
-  useEffect(() => {
-    console.log("posted to db");
-  }, [newPost]);
   return (
     <div>
       <Button variant="primary" onClick={handleShow}>
