@@ -7,6 +7,7 @@ function Home() {
   const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState({});
   const [loggedIn, setLoggedIn] = useState(false);
+  const [search, setSearch] = useState('')
 
   //  loggedIn ? console.log("Access Granted") : console.log("Log In");
   useEffect(() => {
@@ -15,6 +16,19 @@ function Home() {
       .then((r) => r.json())
       .then((data) => setPosts(data));
   }, [newPost]);
+
+  const changeSearchStringInState = searchString => {
+    setSearch(searchString)
+  }
+
+  const filteredPost = () => {
+    if (search.length > 0) {
+      return posts.filter(post => post.artist.toLowerCase().includes(search.toLowerCase()))
+    } else {
+       return posts
+    }
+    
+  }
 
   return (
     <div>
@@ -37,15 +51,25 @@ function Home() {
               <h5 className="w-50 mx-auto mt-4">
                 ADD A POST BELOW
               </h5>
+              
             </Col>
             <Col className="mx-auto mb-3">
             <NewPost setNewPost={setNewPost} />
             </Col>
           </Col>
         </Col>
+        <div className="searchbar">
+      <label htmlFor="search">Search Posts: </label>
+      <input
+        type="text"
+        id="search"
+        placeholder="Type a Artist to search..."
+        onChange={(e) => changeSearchStringInState( e.target.value)}
+      />
+    </div>
 
         <Col>
-          <CardList posts={posts} setPosts={setPosts} />
+          <CardList posts={ filteredPost () } setPosts={setPosts} />
         </Col>
       </Container>
     </div>
