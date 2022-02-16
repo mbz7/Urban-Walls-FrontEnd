@@ -50,3 +50,7 @@
   background-image: url("../public/urban_walls_background_2.jpg");
   background-size: contain;
 }
+
+.border-1 {
+  border-bottom: 20px solid rgb(2, 79, 120) !important;
+}
