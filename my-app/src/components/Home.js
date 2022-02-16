@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import CardList from "./CardList";
 import NewPost from "./NewPost";
 
@@ -18,16 +18,19 @@ function Home() {
 
   return (
     <div>
-      <Container fluid>
-        <div className="container-fluid bg-light text-dark shadow-sm">
-          <div className="container bg-light p-5">
-            <h1 className="display-4 fw-bold">Recent Posts</h1>
-            <hr />
-            <NewPost setNewPost={setNewPost} />
-          </div>
-        </div>
+      <Container fluid className="bg-light bkgrnd-img">
+      <Col fluid className="container-fluid bg-light text-dark shadow-lg">
+      <Col className="container p-5">
+        <h1 className="display-4 fw-bold">Recent Posts</h1>
+        <hr />
+        <NewPost setNewPost={setNewPost} />
+      </Col>
+    </Col>
+      
+      <Col>
         <CardList posts={posts} setPosts={setPosts} />
-      </Container>
+        </Col>
+        </Container>
     </div>
   );
 }

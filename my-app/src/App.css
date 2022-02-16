@@ -40,3 +40,13 @@
 /* .card-div {
  height: 25rem;
 } */
+
+.main-card {
+  max-width: 800px;
+  text-align: center;
+}
+
+.bkgrnd-img {
+  background-image: url("../public/urban_walls_background_2.jpg");
+  background-size: contain;
+}
