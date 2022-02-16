@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ImageModal from "./ImageModal";
 import {
   Button,
   Card,
@@ -21,6 +22,9 @@ function Cards({
   post,
 }) {
   const [postLikes, setPostLikes] = useState();
+  //modal state
+  const [modalShow, setModalShow] = useState(false);
+  const [image, setImage] = React.useState("");
 
   function handleDeleteClick() {
     console.log("test");
@@ -59,8 +63,20 @@ function Cards({
     setPosts(updatedItems);
   }
 
+  //Modal
+  function handleClick(e) {
+    setImage(post.photo_url);
+    setModalShow(true);
+  }
+
   return (
     <div>
+      {/* Modal */}
+      <ImageModal
+        modalShow={modalShow}
+        setModalShow={setModalShow}
+        image={image}
+      />
       <Container className="d-flex align-items-center justify-content-center">
         <Card
           className="mt-5 shadow-lg p-3 mb-5 bg-body rounded text-center main-card"
@@ -72,12 +88,15 @@ function Cards({
             src={post.photo_url}
             alt={post.artist}
           />
+
           <Card.Body>
+            {/* Modal button */}
+            <Button onClick={handleClick} variant="light">
+              🔍
+            </Button>
             <Card.Title>
               <h3 className="text-uppercase mt-2">{post.artist}</h3>
               <b>{post.location}</b>
-              {/* <br></br>
-            <a href={website}>Link to Website</a> */}
             </Card.Title>
             <hr></hr>
             <Card.Text>
@@ -100,7 +119,6 @@ function Cards({
               </Col>
             </Card.Text>
             <Card.Text>
-
               <Col className="">{post.likes} LIKES</Col>
             </Card.Text>
             <hr></hr>

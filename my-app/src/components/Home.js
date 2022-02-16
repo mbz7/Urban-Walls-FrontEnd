@@ -6,9 +6,7 @@ import NewPost from "./NewPost";
 function Home() {
   const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState({});
-  const [loggedIn, setLoggedIn] = useState(false);
 
-  //  loggedIn ? console.log("Access Granted") : console.log("Log In");
   useEffect(() => {
     console.log("hi");
     fetch("http://localhost:9292/post")
@@ -19,7 +17,10 @@ function Home() {
   return (
     <div>
       <Container fluid className="bg-light bkgrnd-img">
-        <Col fluid className="container-fluid bg-light text-dark shadow-lg border-1">
+        <Col
+          fluid
+          className="container-fluid bg-light text-dark shadow-lg border-1"
+        >
           <Col className="container p-5">
             <div className="text-center">
               <img
@@ -34,12 +35,10 @@ function Home() {
             </h6>
             <hr className="w-75 mx-auto mt-4 mb-2 bg-secondary" />
             <Col>
-              <h5 className="w-50 mx-auto mt-4">
-                ADD A POST BELOW
-              </h5>
+              <h5 className="w-50 mx-auto mt-4">ADD A POST BELOW</h5>
             </Col>
             <Col className="mx-auto mb-3">
-            <NewPost setNewPost={setNewPost} />
+              <NewPost setNewPost={setNewPost} />
             </Col>
           </Col>
         </Col>
