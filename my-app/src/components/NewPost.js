@@ -29,7 +29,7 @@ export default function NewPost({ setNewPost }) {
 
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="outline-success" size="lg" className="mt-3" onClick={handleShow}>
         {" "}
         Create Post{" "}
       </Button>

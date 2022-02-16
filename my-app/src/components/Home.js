@@ -19,18 +19,22 @@ function Home() {
   return (
     <div>
       <Container fluid className="bg-light bkgrnd-img">
-      <Col fluid className="container-fluid bg-light text-dark shadow-lg">
-      <Col className="container p-5">
-        <h1 className="display-4 fw-bold">Recent Posts</h1>
-        <hr />
-        <NewPost setNewPost={setNewPost} />
-      </Col>
-    </Col>
-      
-      <Col>
-        <CardList posts={posts} setPosts={setPosts} />
+        <Col fluid className="container-fluid bg-light text-dark shadow-lg">
+          <Col className="container p-5">
+            <div className="text-center">
+              <img src="./urban_walls_logo.png" className="rounded w-50" alt="Urban Walls Logo" />
+            </div>
+            <p className="w-50 mx-auto">Welcome to Urban Walls, a community helping showcase artwork, murals, and graffiti found in various urban settings.</p>
+            <hr />
+            <Col><h5>Create a Post or View the Gallery Below</h5></Col>
+            <NewPost setNewPost={setNewPost} />
+          </Col>
         </Col>
-        </Container>
+          
+        <Col>
+          <CardList posts={posts} setPosts={setPosts} />
+        </Col>
+      </Container>
     </div>
   );
 }
