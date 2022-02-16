@@ -2,16 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
 import { Container, Row, Col } from "react-bootstrap";
 
-function CardList() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    console.log("hi");
-    fetch("http://localhost:9292/post")
-      .then((r) => r.json())
-      .then((data) => setPosts(data));
-  }, []);
-
+function CardList({posts, setPosts}) {
   const renderPosts = (l) =>
   <Cards key={l.id} post={l}  setPosts={setPosts} posts={posts} />
   
