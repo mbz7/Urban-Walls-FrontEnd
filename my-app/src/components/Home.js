@@ -28,17 +28,17 @@ function Home() {
                 alt="Urban Walls Logo"
               />
             </div>
-            <p className="w-50 mx-auto mt-3 mb-3">
+            <h6 className="w-50 mx-auto mt-3 mb-3 h6-c">
               Welcome to Urban Walls, a community helping showcase artwork,
               murals, and graffiti found in various urban settings.
-            </p>
-            <hr className="w-75 mx-auto mt-5 mb-5 bg-secondary" />
+            </h6>
+            <hr className="w-75 mx-auto mt-4 mb-2 bg-secondary" />
             <Col>
-              <h5 className="w-50 mx-auto mt-5">
-                Create a Post or View the Gallery Below
+              <h5 className="w-50 mx-auto mt-4">
+                ADD A POST BELOW
               </h5>
             </Col>
-            <Col className="mx-auto mt-3 mb-5">
+            <Col className="mx-auto mb-3">
             <NewPost setNewPost={setNewPost} />
             </Col>
           </Col>
