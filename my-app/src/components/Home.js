@@ -43,30 +43,40 @@ function Home() {
                 src="./urban_walls_logo.png"
                 className="rounded w-50"
                 alt="Urban Walls Logo"
-              /> 
+              />
             </div>
             <h6 className="w-50 mx-auto mt-3 mb-3 h6-c">
               Welcome to Urban Walls, a community helping showcase artwork,
               murals, and graffiti found in various urban settings.
             </h6>
             <hr className="w-75 mx-auto mt-4 mb-2 bg-secondary" />
+
+            <Col className="w-50 mx-auto mt-3 mb-2">
+              <Col>
+                <div className="p-1">
+                  <label htmlFor="search">
+                    <h5>Search Posts</h5>
+                  </label>
+                </div>
+              </Col>
+              <div>
+                <input
+                  className="form-control rounded p-2"
+                  type="text"
+                  id="search"
+                  placeholder="Type a Artist to search..."
+                  onChange={(e) => changeSearchStringInState(e.target.value)}
+                />
+              </div>
+            </Col>
             <Col>
-              <h5 className="w-50 mx-auto mt-4">ADD A POST BELOW</h5>
+              <h5 className="w-50 mx-auto mt-4">Or</h5>
             </Col>
             <Col className="mx-auto mb-3">
               <NewPost setNewPost={setNewPost} />
             </Col>
           </Col>
         </Col>
-        <div className="searchbar">
-          <label htmlFor="search">Search Posts: </label>
-          <input
-            type="text"
-            id="search"
-            placeholder="Type a Artist to search..."
-            onChange={(e) => changeSearchStringInState(e.target.value)}
-          />
-        </div>
 
         <Col>
           <CardList posts={filteredPost()} setPosts={setPosts} />

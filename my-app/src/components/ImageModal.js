@@ -9,9 +9,10 @@ export default function ImageModal({ modalShow, setModalShow, image }) {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
+        animation={true}
       >
-        <Modal.Body className="lightbox-image img-fluid">
-          <Image className="img-fluid"src={image} />
+        <Modal.Body className="img-fluid mdl-body">
+          <Image className="img-fluid w-100"src={image} />
         </Modal.Body>
       </Modal>
     );

@@ -61,7 +61,22 @@
   font-size: 1.1em;
 }
 
-.lightbox-image {
+.mdl-body {
+  position: relative;
+  padding: 0px;
+  min-height: 400px;
+  background: #ccc;
+}
+
+/* .lightbox-image {
   margin: 0 auto;
-  height: 300px;
+  min-height: 300px;
+} */
+
+.searchbar {
+  min-width: 500px;
+}
+
+.new-post-btn {
+  min-width: 350px;
 }
