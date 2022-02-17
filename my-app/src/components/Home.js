@@ -6,11 +6,10 @@ import NewPost from "./NewPost";
 function Home() {
   const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState({});
-  const [loggedIn, setLoggedIn] = useState(false);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    console.log("hi");
+    console.log("new main get");
     fetch("http://localhost:9292/post")
       .then((r) => r.json())
       .then((data) => setPosts(data));

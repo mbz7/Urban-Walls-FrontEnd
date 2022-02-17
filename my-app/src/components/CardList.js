@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Cards from "./Cards";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 
 function CardList({ posts, setPosts }) {
   const renderPosts = (l) => (
