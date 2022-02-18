@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ImageModal from "./ImageModal";
+import Moment from "react-moment";
+import 'moment-timezone'
 import {
   Button,
   Card,
@@ -122,6 +124,17 @@ function Cards({
                 </Card.Text>
                 <Card.Text>
                   <Col className="">{post.likes} LIKES</Col>
+                </Card.Text>
+                <Card.Text>
+                  <Col className="">
+                    <Card.Text>
+                      <Col className="">
+                        <Moment fromNow ago>
+                         {post.post_date} 
+                        </Moment> ago
+                      </Col>
+                    </Card.Text>
+                  </Col>
                 </Card.Text>
                 <hr></hr>
                 <Button onClick={handleDeleteClick} className="btn-danger">

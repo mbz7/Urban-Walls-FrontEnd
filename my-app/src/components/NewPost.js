@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button, Row, Col, Modal } from "react-bootstrap";
+import moment from "moment";
 
 export default function NewPost({ setNewPost }) {
   const [show, setShow] = useState(false);
@@ -11,6 +12,7 @@ export default function NewPost({ setNewPost }) {
   const handleShow = () => setShow(true);
 
   function handleSubmit(e) {
+    let date_moment = moment(new Date, "ddd MMM DD YYYY HH:mm");
     fetch("http://localhost:9292/post", {
       method: "POST",
       headers: {
@@ -21,6 +23,7 @@ export default function NewPost({ setNewPost }) {
         location: location,
         artist: artist,
         user_name: user,
+        post_date: date_moment,
       }),
     })
       .then((r) => r.json())
