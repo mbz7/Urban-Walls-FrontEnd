@@ -44,6 +44,17 @@
 .main-card {
   max-width: 800px;
   text-align: center;
+  border-radius: 50px;
+}
+
+/* .header-logo {
+  min-height: 300px;
+  width: auto;
+  margin: auto;
+} */
+
+.header-bk {
+  color: #f7f7f7;
 }
 
 .bkgrnd-img {
@@ -80,3 +91,34 @@
 .new-post-btn {
   min-width: 350px;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue'
+}
+
+p, input, button {
+  font-family: 'Montserrat'
+}
+
+.h2-title {
+  font-size: 3rem;
+}
+
+.h5-subtitle {
+  color: rgb(53, 53, 53);
+  margin-top: -5px;
+  font-family: 'Montserrat';
+  font-size: 1.1rem;
+}
+
+.sub-text {
+  font-family: 'Montserrat';
+  color: rgb(75, 75, 75);
+  font-size: 1.2rem;
+  margin-top: -70px;
+  margin-bottom: 50px;
+  width: 60%;
+}
+
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Montserrat', sans-serif; */

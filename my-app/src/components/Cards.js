@@ -72,7 +72,7 @@ function Cards({
         setModalShow={setModalShow}
         image={image}
       />
-      <Container className="d-flex align-items-center justify-content-center">
+      <Container className="d-flex align-items-center justify-content-center rounded">
         <Card
           className="mt-5 shadow-lg p-3 mb-5 bg-body rounded text-center main-card"
           style={{ width: "75%" }}
@@ -90,17 +90,18 @@ function Cards({
             aria-expanded={open}
             variant="outline-dark"
             size="sm"
-            className="mt-2 p-2"
+            className="mt-2 p-2 text-muted"
           >
             Click To Hide/Expand
           </Button>
           <Collapse in={open}>
-            <div id="example-collapse-text">
+            <div id="example-collapse-text rounded-lg">
               <Card.Body>
                 <Card.Title>
-                  <h3 className="text-uppercase mt-2">{post.artist}</h3>
-                  <p>Posted By: {post.user.user_name}</p>
-                  <b>{post.location}</b>
+                  <h2 className="text-uppercase mt-2 h2-title">{post.artist}</h2>
+                  <h5 className="h5-subtitle">{`${post.location}`}</h5>
+                  <h6 className="text-muted mt-4">Posted By: {post.user.user_name}</h6>
+                  
                 </Card.Title>
                 <hr></hr>
                 <Card.Text>
@@ -123,16 +124,17 @@ function Cards({
                   </Col>
                 </Card.Text>
                 <Card.Text>
-                  <Col className="">{post.likes} LIKES</Col>
+                  <Col className=""><h4>{post.likes} LIKES</h4></Col>
                 </Card.Text>
                 <Card.Text>
-                  <Col className="">
-                    <Card.Text>
-                      <Col className="">
+                  <Col className="text-muted">
+                
+                    <Card.Text><h6>
+                      <Col className="">Date Posted:{' '}  
                         <Moment fromNow ago>
-                         {post.post_date} 
+                         {post.post_date}
                         </Moment> ago
-                      </Col>
+                      </Col></h6>
                     </Card.Text>
                   </Col>
                 </Card.Text>

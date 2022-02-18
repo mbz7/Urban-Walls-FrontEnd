@@ -40,7 +40,7 @@ export default function NewPost({ setNewPost }) {
         onClick={handleShow}
       >
         {" "}
-        Create Post{" "}
+        Create New Post{" "}
       </Button>
       <Modal
         size="lg"

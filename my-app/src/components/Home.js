@@ -34,27 +34,27 @@ function Home() {
       <Container fluid className="bg-light bkgrnd-img">
         <Col
           fluid
-          className="container-fluid bg-light text-dark shadow-lg border-1"
+          className="container-fluid header-bk bg-light text-dark shadow-lg border-1"
         >
           <Col className="container p-5">
             <div className="text-center">
               <img
-                src="./urban_walls_logo.png"
-                className="rounded w-50"
+                src="./urban_walls_header_1.png"
+                className="w-75 p-5"
                 alt="Urban Walls Logo"
               />
             </div>
-            <h6 className="w-50 mx-auto mt-3 mb-3 h6-c">
+            <p className=" mx-auto sub-text pl-5 pr-5">
               Welcome to Urban Walls, a community helping showcase artwork,
               murals, and graffiti found in various urban settings.
-            </h6>
-            <hr className="w-75 mx-auto mt-4 mb-2 bg-secondary" />
+            </p>
+            <hr className="w-75 mx-auto mt-4 mb-4 bg-secondary" />
 
-            <Col className="w-50 mx-auto mt-3 mb-2">
+            <Col className="w-50 mx-auto mt-5 mb-2">
               <Col>
-                <div className="p-1">
+                <div className="p-1 mt-4">
                   <label htmlFor="search">
-                    <h5>Search Posts</h5>
+                    <h2>Search Posts</h2>
                   </label>
                 </div>
               </Col>
@@ -63,13 +63,13 @@ function Home() {
                   className="form-control rounded p-2"
                   type="text"
                   id="search"
-                  placeholder="Type a Artist to search..."
+                  placeholder="Search Posts For An Artist..."
                   onChange={(e) => changeSearchStringInState(e.target.value)}
                 />
               </div>
             </Col>
             <Col>
-              <h5 className="w-50 mx-auto mt-4">Or</h5>
+              <h3 className="w-50 mx-auto mt-4">Or</h3>
             </Col>
             <Col className="mx-auto mb-3">
               <NewPost setNewPost={setNewPost} />
