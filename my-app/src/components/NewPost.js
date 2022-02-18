@@ -49,7 +49,7 @@ export default function NewPost({ setNewPost }) {
         show={show}
         onHide={handleClose}
       >
-        <Modal.Header className="bg-warning" closeButton>
+        <Modal.Header className="bg-info" closeButton>
           <Modal.Title>Post New Art</Modal.Title>
         </Modal.Header>
         <Modal.Body>
