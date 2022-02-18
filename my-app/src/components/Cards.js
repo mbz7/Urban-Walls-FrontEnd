@@ -97,7 +97,7 @@ function Cards({
               <Card.Body>
                 <Card.Title>
                   <h3 className="text-uppercase mt-2">{post.artist}</h3>
-                  {/* <p>User: {post.user.user_name}</p> */}
+                  <p>User: {post.user.user_name}</p>
                   <b>{post.location}</b>
                 </Card.Title>
                 <hr></hr>

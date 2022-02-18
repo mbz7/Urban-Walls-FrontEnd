@@ -2,7 +2,7 @@ import "./App.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
+// import About from "./components/About";
 import Login from "./components/Login";
 
 function App() {
@@ -20,9 +20,9 @@ function App() {
                   <Nav.Link as={Link} to="/">
                     Home
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/about">
+                  {/* <Nav.Link as={Link} to="/about">
                     About
-                  </Nav.Link>
+                  </Nav.Link> */}
                   <Nav.Link as={Link} to="/login ">
                     Login
                   </Nav.Link>
@@ -34,7 +34,7 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} /> */}
             <Route path="/login" element={<Login />} />
           </Routes>
         </div>
