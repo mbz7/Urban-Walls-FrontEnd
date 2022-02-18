@@ -80,7 +80,7 @@ export default function NewPost({ setNewPost }) {
               onChange={(e) => setUser(e.target.value)}
               size="sm"
               type="text"
-              placeholder="Artist"
+              placeholder="Name"
               className="p-2 mb-3"
             />
           </Modal.Body>
