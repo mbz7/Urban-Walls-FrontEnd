@@ -14,7 +14,7 @@ function Cards({
   post,
 }) {
   const [postLikes, setPostLikes] = useState();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   //modal state
   const [modalShow, setModalShow] = useState(false);
   const [image, setImage] = React.useState("");
@@ -86,10 +86,11 @@ function Cards({
             onClick={() => setOpen(!open)}
             aria-controls="example-collapse-text"
             aria-expanded={open}
-            variant="outline-secondary"
+            variant="outline-dark"
             size="sm"
+            className="mt-2 p-2"
           >
-            More Info
+            Click To Hide/Expand
           </Button>
           <Collapse in={open}>
             <div id="example-collapse-text">
